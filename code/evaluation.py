@@ -1,10 +1,10 @@
 import os
 
-from code.navigation_module.test_query_read import *
-from code.navigation_module.navigate_test_domain import navigate_domain
-from code.dataset_preparation.website_para_reading import read_annotated_para_file
-from code.dataset_preparation.load_additional_resources import load_external_resources
-from code.navigation_module.util_navigation import evaluate_performance, get_root_activity
+from navigation_module.test_query_read import *
+from navigation_module.navigate_test_domain import navigate_domain
+from dataset_preparation.website_para_reading import read_annotated_para_file
+from dataset_preparation.load_additional_resources import load_external_resources
+from navigation_module.util_navigation import evaluate_performance, get_root_activity
 
 
 def run_evaluation(args, nsm_model, data_vec_dump):

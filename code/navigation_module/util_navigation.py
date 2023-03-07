@@ -1,5 +1,5 @@
-from code.dataset_preparation.data_prep_util import *
-from code.train_data_preprocessing.preprocess_util import get_candidate_query_phrases
+from dataset_preparation.data_prep_util import *
+from train_data_preprocessing.preprocess_util import get_candidate_query_phrases
 np.random.seed(1234)
 
 

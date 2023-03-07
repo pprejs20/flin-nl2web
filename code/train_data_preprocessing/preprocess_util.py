@@ -13,7 +13,12 @@ from spacy.tokens import Doc
 np.random.seed(1234)
 random.seed(1234)
 
-stopWords = set(stopwords.words('english'))
+try:
+    stopWords = set(stopwords.words('english'))
+except LookupError as e:
+    nltk.download('stopwords')
+    stopWords = set(stopwords.words('english'))
+
 lemmatizer = WordNetLemmatizer()
 ps = PorterStemmer()
 nlp = spacy.load("en_core_web_sm")

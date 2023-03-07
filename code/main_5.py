@@ -1,11 +1,11 @@
 import _pickle as pickle
 import pprint as pp, argparse
 
-from code.evaluation import run_evaluation
-from code.nsm_model.Neural_Semantic_Matcher import *
-from code.nsm_model.util_helper import *
-from code.train import train_and_evaluate
-from code.train_data_preprocessing.prepare_vectorized_dataset import prepare_vectorized_dataset
+from evaluation import run_evaluation
+from nsm_model.Neural_Semantic_Matcher import *
+from nsm_model.util_helper import *
+from train import train_and_evaluate
+from train_data_preprocessing.prepare_vectorized_dataset import prepare_vectorized_dataset
 
 
 def load_data(args):

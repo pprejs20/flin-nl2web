@@ -1,10 +1,10 @@
-from code.navigation_module.util_navigation import *
-from code.train_data_preprocessing.bert_preprocess_util import *
-from code.train_data_preprocessing.preprocess_util import get_vectorized_phrase, get_vectorized_char_seq, \
+from navigation_module.util_navigation import *
+from train_data_preprocessing.bert_preprocess_util import *
+from train_data_preprocessing.preprocess_util import get_vectorized_phrase, get_vectorized_char_seq, \
                                             get_vectorized_entity_tags, char_vocab_to_id, ent_vocab_to_id
-from code.train_data_preprocessing.external_matching_module import get_ext_matching_score
-from code.train_data_preprocessing.preprocess_util import pad_arr_seq
-from code.globals import max_seq_len, max_no_dict
+from train_data_preprocessing.external_matching_module import get_ext_matching_score
+from train_data_preprocessing.preprocess_util import pad_arr_seq
+from globals import max_seq_len, max_no_dict
 
 
 def get_test_tuple_vec_act(q_vec, q_phrase, action_next, para_DB, para_dom, vocab_to_id):

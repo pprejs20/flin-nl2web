@@ -1,12 +1,12 @@
 from operator import itemgetter
 
-from code.globals import max_seq_len
-from code.navigation_module.test_batch_util import get_next_test_batch_action, \
+from globals import max_seq_len
+from navigation_module.test_batch_util import get_next_test_batch_action, \
                                      get_next_test_batch_para_tagging, get_next_test_batch_para_matching
-from code.navigation_module.util_navigation import *
-from code.navigation_module.vectorize_test_data import get_test_tuple_vec_act, \
+from navigation_module.util_navigation import *
+from navigation_module.vectorize_test_data import get_test_tuple_vec_act, \
                                         get_test_tuple_vec_para_tagging, get_test_tuple_vec_para_matching
-from code.train_data_preprocessing.preprocess_util import get_vectorized_phrase
+from train_data_preprocessing.preprocess_util import get_vectorized_phrase
 
 
 def navigate_domain(nsm_model, q_phrase, node_DB, para_DB, para_dom, vocab_to_id, activity_name,

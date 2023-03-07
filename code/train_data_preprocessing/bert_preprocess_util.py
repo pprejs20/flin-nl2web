@@ -1,5 +1,5 @@
 from bert import tokenization
-from code.globals import max_seq_len, bert_vocab_file
+from globals import max_seq_len, bert_vocab_file
 import re
 
 

@@ -1,5 +1,5 @@
-from code.navigation_module.util_navigation import *
-from code.nsm_model.util_helper import add_bert_input
+from navigation_module.util_navigation import *
+from nsm_model.util_helper import add_bert_input
 
 
 def get_next_test_batch_action(data, itr, batch_size):
