@@ -91,7 +91,7 @@ We will update the code repository to incorporate the website schema reading mod
     and you are ready to go. 
 
 ## Patryk's Environment Set Up
-I've used a Ubuntu 20.04.1 linux system to make this environment work, not sure if other linux systems will work, however I do not see why not. After setting up a Linux OS environment follow the steps below: 
+I've used a Ubuntu 22.04.1 linux system to make this environment work, not sure if other linux systems will work, however I do not see why not. After setting up a Linux OS environment follow the steps below: 
 
 1. Install Anaconda (https://www.anaconda.com/products/distribution#Downloads) any python version is fine for the installer, Python 3.6.8 will be set in later steps.
 2. Navigate to where the file was downloaded and run the .sh script using the following command:
