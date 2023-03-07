@@ -90,3 +90,39 @@ We will update the code repository to incorporate the website schema reading mod
     If the code runs successfully, and there is no import error, then everything is set up properly 
     and you are ready to go. 
 
+## Patryk's Environment Set Up
+I've used a Ubuntu 20.04.1 linux system to make this environment work, not sure if other linux systems will work, however I do not see why not. After setting up a Linux OS environment follow the steps below: 
+
+1. Install Anaconda (https://www.anaconda.com/products/distribution#Downloads) any python version is fine for the installer, Python 3.6.8 will be set in later steps.
+2. Navigate to where the file was downloaded and run the .sh script using the following command:
+```
+./Anaconda3-<version>-Linux-x86_64.sh
+```
+3. After following the steps, run the following command and restart the terminal: 
+```
+conda init
+```
+4. When you boot up the new terminal window you might be in a virtual environment, exit it using:
+```
+conda deactivate
+```
+5. Create a new conda virtual environement which uses Python 3.6.8 and activate it:
+```
+conda create --name flin_venv python=3.6.8
+conda activate flin_venv
+```
+6. Install the requirements by navigating to the "code/" folder of this repository and running the following command:
+```
+pip install -r requirements.txt
+```
+7. Then install this dependency which cannot be installed using pip:
+```
+python -m spacy download en_core_web_sm en-core-web-sm==2.1.0
+```
+If that doesn't work install it manually by downloading it (from here: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.1.0/en_core_web_sm-2.1.0.tar.gz#egg=en_core_web_sm), navigating to the newly downloaded file and running:
+```
+pip install en_core_web_sm-2.1.0.tar.gz
+```
+
+8. There will be further steps required to set up the path to the BERT Tokenizer Vocab file, which I am investigating...
+
