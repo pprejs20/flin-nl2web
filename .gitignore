@@ -1,0 +1,7 @@
+code/__pycache__/
+code/all_results/
+code/nsm_model/__pycache__/
+code/dataset_preparation/__pycache__/
+code/train_data_preprocessing/__pycache__/
+code/navigation_module/__pycache__/
+code/bert_vocab/
