@@ -1,6 +1,6 @@
-from code.globals import max_seq_len
-from code.nsm_model.Embedding_layer import get_char_embeddings_phrase
-from code.nsm_model.seq_learning import *
+from globals import max_seq_len
+from nsm_model.Embedding_layer import get_char_embeddings_phrase
+from nsm_model.seq_learning import *
 
 
 def encode_phrase_char(bert_module, char_embed_encoder, input_seq, seq_len, bert_input, args, dropout, embed_dim, layer_name):

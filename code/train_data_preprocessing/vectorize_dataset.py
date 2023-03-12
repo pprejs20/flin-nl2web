@@ -1,10 +1,10 @@
-from code.dataset_preparation.data_prep_util import *
-from code.train_data_preprocessing.bert_preprocess_util import *
-from code.train_data_preprocessing.preprocess_util import get_vectorized_phrase, pad_arr_seq,\
+from dataset_preparation.data_prep_util import *
+from train_data_preprocessing.bert_preprocess_util import *
+from train_data_preprocessing.preprocess_util import get_vectorized_phrase, pad_arr_seq,\
                                  get_vectorized_char_seq, char_vocab_to_id, ent_vocab_to_id, \
                                  get_vectorized_entity_tags, get_gold_labels_tagger
-from code.globals import max_no_dict, max_seq_len
-from code.train_data_preprocessing.external_matching_module import get_ext_matching_score
+from globals import max_no_dict, max_seq_len
+from train_data_preprocessing.external_matching_module import get_ext_matching_score
 
 
 def get_vectorized_dataset(data_pos_neg, vocab_to_id, p_DB):

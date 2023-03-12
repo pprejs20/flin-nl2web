@@ -4,7 +4,7 @@ import sys
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-from code.nsm_model.util_helper import *
+from nsm_model.util_helper import *
 
 
 def train_and_evaluate(sess, args, model, train, valid, saver, model_path, batch_size, vocab, embed_dim, pre_train = False):

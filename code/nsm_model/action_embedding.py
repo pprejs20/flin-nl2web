@@ -1,6 +1,6 @@
-from code.globals import max_no_dict, max_seq_len
-from code.nsm_model.para_val_semantics import encode_phrase
-from code.nsm_model.seq_learning import *
+from globals import max_no_dict, max_seq_len
+from nsm_model.para_val_semantics import encode_phrase
+from nsm_model.seq_learning import *
 
 
 def get_action_embedding(bert_module, word_embed_encoder, act_name, act_para_names, bert_act_name, bert_act_para_names,

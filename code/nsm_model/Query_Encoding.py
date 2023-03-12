@@ -1,4 +1,4 @@
-from code.nsm_model.seq_learning import *
+from nsm_model.seq_learning import *
 
 
 def encode_query(model, tag):

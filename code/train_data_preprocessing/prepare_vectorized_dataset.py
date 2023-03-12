@@ -1,8 +1,8 @@
 import numpy as np, os
 import pickle
-from code.train_data_preprocessing.vectorize_dataset import get_vectorized_dataset
-from code.dataset_preparation.data_prep_util import replace_punctuations
-from code.train_data_preprocessing.preprocess_util import lemmatizer, get_candidate_query_phrases
+from train_data_preprocessing.vectorize_dataset import get_vectorized_dataset
+from dataset_preparation.data_prep_util import replace_punctuations
+from train_data_preprocessing.preprocess_util import lemmatizer, get_candidate_query_phrases
 
 
 def get_all_available_actions(activity_name, node_DB, para_DB):

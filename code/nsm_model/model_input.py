@@ -1,5 +1,5 @@
 import tensorflow as tf
-from code.globals import max_no_dict, max_seq_len
+from globals import max_no_dict, max_seq_len
 
 
 def build_query_input_nodes(query_in):
