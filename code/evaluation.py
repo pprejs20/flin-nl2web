@@ -7,6 +7,40 @@ from dataset_preparation.load_additional_resources import load_external_resource
 from navigation_module.util_navigation import evaluate_performance, get_root_activity
 
 
+import csv
+
+# [Patryk] My function
+def read_website_schema(trace_id):
+    node_DB = {}
+    para_DB = {}
+    para_dom = {}
+
+    # read action.csv
+    with open(f'../webnav_dataset/{trace_id}_datafiles/{trace_id}_action.csv', 'r') as file:
+        reader = csv.reader(file)
+        # next(reader)  # skip header row
+        for row in reader:
+            action_id = row[0]
+            node_id = row[1]
+            node_desc = row[2]
+            action_desc = row[3]
+            node_DB[node_id] = node_desc  # add node to node_DB
+            node_DB[action_id] = action_desc  # add action to node_DB
+
+    # read para.csv
+    with open(f'../webnav_dataset/{trace_id}_datafiles/{trace_id}_para.csv', 'r') as file:
+        reader = csv.reader(file)
+        # next(reader)  # skip header row
+        for row in reader:
+            para_id = row[0]
+            para_type = row[1]
+            para_dom[para_id] = row[2].split(',')  # add parameter domain to para_dom
+            para_DB[para_id] = para_type  # add parameter type to para_DB
+
+    return node_DB, para_DB, para_dom
+
+
+
 def run_evaluation(args, nsm_model, data_vec_dump):
     # loading training dataset and vocab ....
     _, _, vocab_to_id, id_to_vocab = data_vec_dump
@@ -18,10 +52,11 @@ def run_evaluation(args, nsm_model, data_vec_dump):
         os.makedirs('./all_results/' + model_result_dict + '/')
 
     ''' call a test website schema parsing module here'''
-    # node_DB, para_DB, para_dom, _, _, _ = get_processed_graph_info(test_trace_id)
-    node_DB = None
-    para_DB = None
-    para_dom = None
+    # node_DB, para_DB, para_dom, _, _, _ = read_website_schema(test_trace_id)
+    node_DB, para_DB, para_dom = read_website_schema(test_trace_id)
+    # node_DB = None
+    # para_DB = None
+    # para_dom = None
 
     if args['eval_mode'] == 'of':
 
