@@ -22,7 +22,9 @@ def load_data(args):
     else:
         dataset_dump = None
         print('vectorized Data dump does not exist ...preparing vectorized training/evaluation data ...')
+        print('[Patryk] Checking: ' + basepath + str(train_trace_id) + '_dataset_dump.pickle')
         if os.path.isfile(basepath + str(train_trace_id) + '_dataset_dump.pickle'):
+            print('[Patryk] ' + basepath + str(train_trace_id) + '_dataset_dump.pickle' + ' IS A FILE !')
             with open(basepath + str(train_trace_id) + '_dataset_dump.pickle', "rb") as input_file:
                 dataset_dump = pickle.load(input_file)
                 print('... DATA Preparation Finished ....')
@@ -121,7 +123,7 @@ if __name__ == '__main__':
                                                                                  default='./qa_model/flin/')
     parser.add_argument('--resource-dir', help='directory for storing resource', default='../resource/')
     parser.add_argument('--data-path', help='directory for dataset annotation', default='../webnav_dataset/')
-    parser.add_argument('--train-trace-id', help='train trace id', default='925')
+    parser.add_argument('--tr   ain-trace-id', help='train trace id', default='925')
     parser.add_argument('--test-trace-id', help='test trace id', default='925')
     parser.add_argument('--model-result-dict', help='model result dict', default='flin')
 
