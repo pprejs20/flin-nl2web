@@ -1,6 +1,6 @@
 # Uncased ...
 
-bert_vocab_file = '....'  # add the path of BERT Tokenizer Vocab file here ..
+bert_vocab_file = 'bert_vocab/vocab.txt'  # add the path of BERT Tokenizer Vocab file here ..
 
 max_seq_len = {'query': 30, 'word': 12, 'activity_desc': 20, 'activity_content_phrase': 10,
                    'action_name': 5, 'para_name': 5, 'para_val': 7,
