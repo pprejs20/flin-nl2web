@@ -1,12 +1,12 @@
 import tensorflow_hub as hub
 
-from code.nsm_model.action_embedding import get_action_embedding
-from code.nsm_model.model_input import *
-from code.nsm_model.para_val_semantics import encode_phrase, encode_phrase_char
-from code.train_data_preprocessing.preprocess_util import char_vocab_to_id, ent_vocab_to_id
-from code.nsm_model.Embedding_layer import *
-from code.nsm_model.seq_learning import bert_encoding_layer
-from code.nsm_model.Query_Encoding import encode_query
+from nsm_model.action_embedding import get_action_embedding
+from nsm_model.model_input import *
+from nsm_model.para_val_semantics import encode_phrase, encode_phrase_char
+from train_data_preprocessing.preprocess_util import char_vocab_to_id, ent_vocab_to_id
+from nsm_model.Embedding_layer import *
+from nsm_model.seq_learning import bert_encoding_layer
+from nsm_model.Query_Encoding import encode_query
 from tensorflow.contrib.layers.python.layers import initializers
 
 
