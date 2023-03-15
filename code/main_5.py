@@ -30,6 +30,7 @@ def load_data(args):
                 print('... DATA Preparation Finished ....')
         else:
             print("labeled data dump does not exit!")
+
             exit(0)
 
         data_vec = prepare_vectorized_dataset(train_trace_id, dataset_dump)
@@ -123,7 +124,7 @@ if __name__ == '__main__':
                                                                                  default='./qa_model/flin/')
     parser.add_argument('--resource-dir', help='directory for storing resource', default='../resource/')
     parser.add_argument('--data-path', help='directory for dataset annotation', default='../webnav_dataset/')
-    parser.add_argument('--tr   ain-trace-id', help='train trace id', default='925')
+    parser.add_argument('--train-trace-id', help='train trace id', default='925')
     parser.add_argument('--test-trace-id', help='test trace id', default='925')
     parser.add_argument('--model-result-dict', help='model result dict', default='flin')
 
